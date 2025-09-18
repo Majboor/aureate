@@ -9,29 +9,28 @@ const EditorialSection = () => {
     <section className="relative" ref={ref}>
       {/* Full-width Editorial Image with Enhanced Parallax */}
       <div className="relative h-[70vh] sm:h-[80vh] lg:h-screen overflow-hidden">
-        <div className="parallax-container">
-          <img 
-            src={editorialImage}
-            alt="Creative professional at work"
-            className={`image-fullscreen parallax-element hover-scale-gentle transition-all duration-1000 ${
-              isInView ? 'scale-100' : 'scale-105'
-            }`}
-            style={{ 
-              transform: `translateY(${offsetY * 0.5}px) scale(${isInView ? 1 : 1.05})`,
-              transition: isInView ? 'transform 1s ease-out' : 'none'
-            }}
-          />
-        </div>
+        <img 
+          src={editorialImage}
+          alt="Creative professional at work"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ 
+            transform: `translateY(${offsetY * 0.2}px)`,
+            transition: 'transform 0.1s ease-out',
+            minWidth: '100vw',
+            minHeight: '100%'
+          }}
+          onError={(e) => {
+            console.log('Image failed to load:', editorialImage);
+            e.currentTarget.style.backgroundColor = 'red';
+          }}
+          onLoad={() => console.log('Image loaded successfully:', editorialImage)}
+        />
         
-        {/* Dynamic Overlay with Mobile Optimization */}
-        <div className={`absolute inset-0 bg-gradient-to-r from-black/50 sm:from-black/40 via-black/30 sm:via-black/20 to-transparent transition-all duration-1000 ${
-          isInView ? 'opacity-100' : 'opacity-80'
-        }`} />
         
         {/* Asymmetrical Text with Enhanced Mobile Layout */}
-        <div className="absolute inset-0 flex items-center">
+        <div className="absolute inset-0 flex items-center justify-center">
           <div className="container-custom">
-            <div className="max-w-md sm:max-w-lg ml-0 sm:ml-auto mr-0 sm:mr-0 lg:mr-20">
+            <div className="max-w-md sm:max-w-lg ml-0 sm:ml-auto mr-0 sm:mr-0 lg:mr-20 mt-16 sm:mt-20 lg:mt-12">
               <div className={`transform transition-all duration-1000 delay-300 ${
                 isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6 sm:translate-x-12'
               }`}>
