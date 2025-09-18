@@ -1,8 +1,12 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const ProblemSection = () => {
+  const { ref, isInView } = useScrollAnimation(0.3);
+
   return (
-    <section className="section-padding">
+    <section className="section-padding" ref={ref}>
       <div className="container-custom">
-        <div className="max-w-3xl mx-auto text-center space-y-16">
+        <div className={`max-w-3xl mx-auto text-center space-y-16 stagger-children ${isInView ? 'in-view' : ''}`}>
           <h2 className="text-headline text-foreground lowercase">
             we're here to fix that.
           </h2>
