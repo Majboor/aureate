@@ -1,45 +1,46 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="section-padding bg-foreground text-background">
+    <section className="section-padding bg-secondary/30">
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-display mb-8 text-white">
-            Stop Blending In.
+        <div className="max-w-3xl mx-auto text-center space-y-12">
+          <h2 className="text-display text-foreground lowercase">
+            stop blending in.
             <br />
-            <span className="text-accent">Start Standing Out.</span>
+            <span className="text-muted-foreground">start standing out.</span>
           </h2>
           
-          <p className="text-subheading mb-12 opacity-90">
-            Your brand deserves a digital home as unique and compelling as your products. 
-            It's time to stop looking generic and start being iconic.
+          <p className="text-subheading text-muted-foreground">
+            your brand deserves a digital home as unique and compelling as your products. 
+            it's time to stop looking generic and start being iconic.
           </p>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 lg:p-12 shadow-premium">
-            <h3 className="text-2xl lg:text-3xl font-display font-semibold mb-6 text-white">
-              Ready to build a brand people remember and buy from?
+          <div className="space-y-8">
+            <h3 className="text-xl font-display font-medium text-foreground lowercase tracking-wide">
+              ready to build a brand people remember and buy from?
             </h3>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-4 shadow-accent hover-glow group"
+                className="bg-foreground text-background hover:bg-foreground/90 px-8 py-4 rounded-full font-medium transition-gentle"
               >
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Your Creative Consultation
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-smooth" />
+                book your creative consultation
               </Button>
               
-              <p className="text-sm text-white/80 max-w-xs">
-                Free 30-minute strategy call to discuss your vision and explore how we can transform your brand.
-              </p>
+              <Button 
+                size="lg" 
+                variant="ghost" 
+                className="text-muted-foreground hover:text-foreground px-8 py-4 rounded-full font-medium transition-gentle"
+              >
+                view case studies
+              </Button>
             </div>
             
-            <div className="mt-8 pt-6 border-t border-white/20">
-              <p className="text-sm text-white/70">
-                Join 100+ premium e-commerce brands who've elevated their digital presence with us.
+            <div className="pt-8 border-t border-border/30">
+              <p className="text-sm text-muted-foreground">
+                free 30-minute strategy call to discuss your vision and explore how we can transform your brand.
               </p>
             </div>
           </div>

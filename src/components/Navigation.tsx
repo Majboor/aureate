@@ -6,29 +6,33 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md">
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-display font-bold text-foreground">
-              Creative<span className="text-accent">Agency</span>
+            <h1 className="text-lg font-display font-medium text-foreground lowercase tracking-wide">
+              studio
             </h1>
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#approach" className="text-body text-muted-foreground hover:text-foreground transition-smooth">
-              Our Approach
+          <div className="hidden md:flex items-center space-x-12">
+            <a href="#work" className="text-sm text-muted-foreground hover:text-foreground transition-gentle lowercase tracking-wide">
+              work
             </a>
-            <a href="#fit" className="text-body text-muted-foreground hover:text-foreground transition-smooth">
-              Right Fit?
+            <a href="#approach" className="text-sm text-muted-foreground hover:text-foreground transition-gentle lowercase tracking-wide">
+              process
             </a>
-            <a href="#work" className="text-body text-muted-foreground hover:text-foreground transition-smooth">
-              Our Work
+            <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-gentle lowercase tracking-wide">
+              about
             </a>
-            <Button variant="outline" size="sm">
-              Book Consultation
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="text-sm font-medium lowercase tracking-wide rounded-full px-6"
+            >
+              contact
             </Button>
           </div>
           
@@ -45,31 +49,31 @@ const Navigation = () => {
         
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-border shadow-premium">
-            <div className="p-4 space-y-4">
-              <a 
-                href="#approach" 
-                className="block text-body text-muted-foreground hover:text-foreground transition-smooth"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Our Approach
-              </a>
-              <a 
-                href="#fit" 
-                className="block text-body text-muted-foreground hover:text-foreground transition-smooth"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Right Fit?
-              </a>
+          <div className="md:hidden absolute top-20 left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border/20">
+            <div className="p-6 space-y-6">
               <a 
                 href="#work" 
-                className="block text-body text-muted-foreground hover:text-foreground transition-smooth"
+                className="block text-sm text-muted-foreground hover:text-foreground transition-gentle lowercase tracking-wide"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Our Work
+                work
               </a>
-              <Button variant="outline" size="sm" className="w-full">
-                Book Consultation
+              <a 
+                href="#approach" 
+                className="block text-sm text-muted-foreground hover:text-foreground transition-gentle lowercase tracking-wide"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                process
+              </a>
+              <a 
+                href="#about" 
+                className="block text-sm text-muted-foreground hover:text-foreground transition-gentle lowercase tracking-wide"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                about
+              </a>
+              <Button variant="ghost" size="sm" className="w-full lowercase tracking-wide rounded-full">
+                contact
               </Button>
             </div>
           </div>

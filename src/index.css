@@ -1,31 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Söhne:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Premium Agency Design System - High contrast, sophisticated palette */
+/* Gen Z Elevated Minimalism Design System - Rhode-inspired neutral palette */
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 8%;
+    /* Calm Foundation Colors */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 20%;
     
-    /* Premium Black & White Foundation */
-    --primary: 0 0% 8%;
+    /* Soft Neutral Base */
+    --primary: 0 0% 25%;
     --primary-foreground: 0 0% 98%;
     
-    /* Sophisticated Grays */
-    --secondary: 0 0% 95%;
-    --secondary-foreground: 0 0% 15%;
+    /* Warm Neutrals */
+    --secondary: 20 15% 95%;
+    --secondary-foreground: 0 0% 30%;
     
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 20 10% 96%;
+    --muted-foreground: 0 0% 55%;
     
-    /* Accent - Electric Blue for CTAs */
-    --accent: 217 91% 60%;
-    --accent-foreground: 0 0% 100%;
+    /* Subtle Accent - Warm Taupe */
+    --accent: 25 20% 75%;
+    --accent-foreground: 0 0% 25%;
     
     /* Supporting Colors */
     --card: 0 0% 100%;
@@ -39,21 +39,21 @@
     
     --border: 0 0% 90%;
     --input: 0 0% 95%;
-    --ring: 217 91% 60%;
+    --ring: 25 20% 75%;
 
-    /* Premium Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 12%));
-    --gradient-accent: linear-gradient(135deg, hsl(217 91% 60%), hsl(220 91% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(0 0% 8%) 50%, hsl(0 0% 12%) 100%);
+    /* Soft Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(20 15% 96%), hsl(25 12% 94%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 20% 75%), hsl(30 18% 78%));
+    --gradient-hero: linear-gradient(135deg, hsl(20 15% 97%) 0%, hsl(25 12% 95%) 100%);
     
-    /* Shadows & Effects */
-    --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
-    --shadow-accent: 0 10px 30px -10px hsl(217 91% 60% / 0.3);
-    --shadow-card: 0 4px 20px -4px rgba(0, 0, 0, 0.05);
+    /* Gentle Shadows & Effects */
+    --shadow-soft: 0 8px 32px -8px rgba(0, 0, 0, 0.06);
+    --shadow-card: 0 2px 16px -4px rgba(0, 0, 0, 0.04);
+    --shadow-hover: 0 4px 24px -4px rgba(0, 0, 0, 0.08);
     
-    /* Animation Timing */
+    /* Smooth Timing */
+    --transition-gentle: all 0.25s ease-out;
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -124,28 +124,28 @@
 }
 
 @layer components {
-  /* Typography Hierarchy */
+  /* Gen Z Typography - Clean & Readable */
   .text-display {
-    @apply font-display text-5xl lg:text-7xl font-bold leading-none tracking-tight;
+    @apply font-display text-4xl lg:text-6xl font-normal leading-tight tracking-wide;
   }
   
   .text-headline {
-    @apply font-display text-3xl lg:text-5xl font-semibold leading-tight tracking-tight;
+    @apply font-display text-2xl lg:text-4xl font-medium leading-relaxed tracking-wide;
   }
   
   .text-subheading {
-    @apply font-body text-xl lg:text-2xl font-medium leading-relaxed;
+    @apply font-body text-lg lg:text-xl font-normal leading-relaxed;
   }
   
   .text-body-large {
-    @apply font-body text-lg leading-relaxed;
+    @apply font-body text-base lg:text-lg leading-relaxed;
   }
   
   .text-body {
-    @apply font-body text-base leading-relaxed;
+    @apply font-body text-sm lg:text-base leading-relaxed;
   }
 
-  /* Premium Effects */
+  /* Gentle Effects */
   .gradient-primary {
     background: var(--gradient-primary);
   }
@@ -158,41 +158,45 @@
     background: var(--gradient-hero);
   }
   
-  .shadow-premium {
-    box-shadow: var(--shadow-premium);
-  }
-  
-  .shadow-accent {
-    box-shadow: var(--shadow-accent);
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
   }
   
   .shadow-card {
     box-shadow: var(--shadow-card);
   }
+  
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
 
-  /* Animation Classes */
+  /* Gentle Animations */
+  .transition-gentle {
+    transition: var(--transition-gentle);
+  }
+  
   .transition-smooth {
     transition: var(--transition-smooth);
   }
   
-  .transition-bounce {
-    transition: var(--transition-bounce);
-  }
-  
   .hover-lift {
-    @apply transition-smooth hover:shadow-premium hover:-translate-y-1;
+    @apply transition-gentle hover:shadow-hover hover:-translate-y-0.5;
   }
   
-  .hover-glow {
-    @apply transition-smooth hover:shadow-accent;
+  .hover-subtle {
+    @apply transition-gentle hover:shadow-soft;
   }
 
-  /* Layout Utilities */
+  /* Layout Utilities - More Spacious */
   .container-custom {
-    @apply max-w-7xl mx-auto px-6 lg:px-8;
+    @apply max-w-6xl mx-auto px-6 lg:px-12;
   }
   
   .section-padding {
-    @apply py-16 lg:py-24;
+    @apply py-20 lg:py-32;
+  }
+  
+  .grid-minimal {
+    @apply grid gap-8 lg:gap-12;
   }
 }

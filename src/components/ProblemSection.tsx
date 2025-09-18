@@ -1,22 +1,24 @@
 const ProblemSection = () => {
   return (
-    <section className="section-padding bg-secondary/30">
+    <section className="section-padding">
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-headline mb-8">
-            We're here to fix that.
+        <div className="max-w-3xl mx-auto text-center space-y-16">
+          <h2 className="text-headline text-foreground lowercase">
+            we're here to fix that.
           </h2>
           
-          <p className="text-body-large mb-12 text-muted-foreground">
-            We are not another web development agency. We are a creative partner for e-commerce brands that refuse to look like everyone else.
-          </p>
-          
-          <div className="bg-card p-8 lg:p-12 rounded-2xl shadow-card">
-            <p className="text-body-large font-medium text-center leading-relaxed">
-              We believe <span className="text-accent font-semibold">desire converts better than discounts</span>. 
-              We build brand-first digital flagships that captivate customers, tell a compelling story, 
-              and sell your products through superior creative direction, not aggressive sales tactics.
+          <div className="space-y-8">
+            <p className="text-body-large text-muted-foreground">
+              we are not another web development agency. we are a creative partner for e-commerce brands that refuse to look like everyone else.
             </p>
+            
+            <div className="max-w-2xl mx-auto">
+              <p className="text-body-large text-foreground leading-relaxed">
+                we believe <em className="font-medium">desire converts better than discounts</em>. 
+                we build brand-first digital experiences that captivate customers and tell compelling stories 
+                through superior creative direction, not aggressive sales tactics.
+              </p>
+            </div>
           </div>
         </div>
       </div>
