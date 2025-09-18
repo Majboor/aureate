@@ -221,6 +221,11 @@
     aspect-ratio: 16 / 9;
   }
   
+  /* Full-screen image for hero/editorial sections */
+  .image-fullscreen {
+    @apply w-full h-full object-cover;
+  }
+  
   .image-responsive-square {
     @apply w-full h-full object-cover;
     aspect-ratio: 1 / 1;
@@ -229,6 +234,16 @@
   .image-responsive-portrait {
     @apply w-full h-full object-cover;
     aspect-ratio: 3 / 4;
+  }
+  
+  /* Parallax Container */
+  .parallax-container {
+    @apply relative w-full h-full overflow-hidden;
+  }
+  
+  .parallax-element {
+    @apply w-full h-full object-cover;
+    will-change: transform;
   }
   
   /* Sophisticated Animation Classes */

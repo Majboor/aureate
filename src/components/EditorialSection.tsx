@@ -9,15 +9,13 @@ const EditorialSection = () => {
       {/* Full-width Editorial Image with Enhanced Parallax */}
       <div className="relative h-[70vh] sm:h-[80vh] lg:h-screen overflow-hidden">
         <div className="parallax-container">
-          <div className="image-container w-full h-[110%]">
-            <img 
-              src={editorialImage}
-              alt="Creative professional at work"
-              className={`image-responsive parallax-element hover-scale-gentle transition-transform duration-1000 ${
-                isInView ? 'scale-100' : 'scale-105'
-              }`}
-            />
-          </div>
+          <img 
+            src={editorialImage}
+            alt="Creative professional at work"
+            className={`image-fullscreen parallax-element hover-scale-gentle transition-transform duration-1000 ${
+              isInView ? 'scale-100' : 'scale-105'
+            }`}
+          />
         </div>
         
         {/* Dynamic Overlay with Mobile Optimization */}
