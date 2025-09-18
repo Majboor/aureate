@@ -187,7 +187,7 @@
     @apply transition-gentle hover:shadow-soft;
   }
 
-  /* Layout Utilities - More Spacious */
+  /* Layout Utilities - More Spacious + Asymmetrical */
   .container-custom {
     @apply max-w-6xl mx-auto px-6 lg:px-12;
   }
@@ -198,5 +198,17 @@
   
   .grid-minimal {
     @apply grid gap-8 lg:gap-12;
+  }
+  
+  /* Scroll Animations */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
