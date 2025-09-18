@@ -1,8 +1,9 @@
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useScrollAnimation, useParallax } from "@/hooks/useScrollAnimation";
 import editorialImage from "@/assets/editorial-work.jpg";
 
 const EditorialSection = () => {
   const { ref, isInView } = useScrollAnimation(0.3);
+  const offsetY = useParallax();
 
   return (
     <section className="relative" ref={ref}>
@@ -12,9 +13,13 @@ const EditorialSection = () => {
           <img 
             src={editorialImage}
             alt="Creative professional at work"
-            className={`image-fullscreen parallax-element hover-scale-gentle transition-transform duration-1000 ${
+            className={`image-fullscreen parallax-element hover-scale-gentle transition-all duration-1000 ${
               isInView ? 'scale-100' : 'scale-105'
             }`}
+            style={{ 
+              transform: `translateY(${offsetY * 0.5}px) scale(${isInView ? 1 : 1.05})`,
+              transition: isInView ? 'transform 1s ease-out' : 'none'
+            }}
           />
         </div>
         
