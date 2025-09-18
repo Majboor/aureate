@@ -12,7 +12,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-lg font-display font-medium text-foreground lowercase tracking-wide">
-              studio
+              aureate
             </h1>
           </div>
           
